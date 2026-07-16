@@ -75,13 +75,26 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
           <p>
             © {new Date().getFullYear()} {company.name}. Alle Rechte vorbehalten.
           </p>
-          <DemoLink className="font-medium text-brand hover:text-brand-dark">
-            Zur Demo →
-          </DemoLink>
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-6">
+            <p>
+              Designed by{" "}
+              <a
+                href="https://www.finity-in.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-brand hover:text-brand-dark"
+              >
+                Finity In
+              </a>
+            </p>
+            <DemoLink className="font-medium text-brand hover:text-brand-dark">
+              Zur Demo →
+            </DemoLink>
+          </div>
         </div>
       </div>
     </footer>
