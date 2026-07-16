@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, LayoutDashboard } from "lucide-react";
-import { DEMO_URL } from "@/lib/site";
+import { DemoLink } from "@/components/DemoLink";
 
 export default function NotFound() {
   return (
@@ -34,13 +34,10 @@ export default function NotFound() {
             <ArrowLeft className="h-4 w-4" aria-hidden />
             Zur Startseite
           </Link>
-          <a
-            href={DEMO_URL}
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark"
-          >
+          <DemoLink className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark">
             Demo starten
             <ArrowRight className="h-4 w-4" aria-hidden />
-          </a>
+          </DemoLink>
         </div>
 
         <nav

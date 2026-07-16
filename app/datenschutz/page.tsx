@@ -27,7 +27,10 @@ export default function DatenschutzPage() {
       <p>
         Wir betreiben diese Marketing-Website (ceo-dashboard.io), um über das Produkt{" "}
         {company.productName} zu informieren und Interessenten zur Live-Demo unter{" "}
-        <a href={DEMO_URL}>{DEMO_URL}</a> weiterzuleiten. Auf der Demo-Plattform
+        <a href={DEMO_URL} target="_blank" rel="noopener noreferrer">
+          {DEMO_URL}
+        </a>{" "}
+        weiterzuleiten. Auf der Demo-Plattform
         verarbeiten wir personenbezogene Daten zur Bereitstellung des CEO Dashboards,
         zur Authentifizierung von Nutzern, zur Verwaltung von Profil- und
         Onboarding-Daten sowie zur Verbesserung unseres Demo-Angebots.

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { DEMO_URL, company } from "@/lib/site";
+import { DemoLink } from "@/components/DemoLink";
+import { company } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -41,9 +42,7 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <a href={DEMO_URL} className="hover:text-brand">
-                Live-Demo
-              </a>
+              <DemoLink className="hover:text-brand">Live-Demo</DemoLink>
             </li>
             <li>
               <Link href="/termin" className="hover:text-brand">
@@ -80,9 +79,9 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {company.name}. Alle Rechte vorbehalten.
           </p>
-          <a href={DEMO_URL} className="font-medium text-brand hover:text-brand-dark">
+          <DemoLink className="font-medium text-brand hover:text-brand-dark">
             Zur Demo →
-          </a>
+          </DemoLink>
         </div>
       </div>
     </footer>

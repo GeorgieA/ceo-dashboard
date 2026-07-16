@@ -31,7 +31,12 @@ export default function TerminPage() {
         <p className="mx-auto mt-3 max-w-xl text-muted">
           Wählen Sie einen passenden Slot für ein Gespräch zum CEO Dashboard. Alternativ
           können Sie die{" "}
-          <a href={DEMO_URL} className="font-medium text-brand hover:underline">
+          <a
+            href={DEMO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-brand hover:underline"
+          >
             Live-Demo
           </a>{" "}
           jederzeit selbst testen.

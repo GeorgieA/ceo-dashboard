@@ -4,7 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { DEMO_URL, navLinks } from "@/lib/site";
+import { DemoLink } from "@/components/DemoLink";
+import { navLinks } from "@/lib/site";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -31,13 +32,13 @@ export function Header() {
         <nav className="hidden items-center gap-8 md:flex" aria-label="Hauptnavigation">
           {navLinks.map((link) =>
             "external" in link && link.external ? (
-              <a
+              <DemoLink
                 key={link.href}
                 href={link.href}
                 className="text-sm font-medium text-muted transition-colors hover:text-brand"
               >
                 {link.label}
-              </a>
+              </DemoLink>
             ) : (
               <Link
                 key={link.href}
@@ -51,12 +52,9 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a
-            href={DEMO_URL}
-            className="hidden rounded-xl bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark sm:inline-flex"
-          >
+          <DemoLink className="hidden rounded-xl bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark sm:inline-flex">
             Demo starten
-          </a>
+          </DemoLink>
           <button
             type="button"
             className="inline-flex rounded-lg p-2 text-foreground md:hidden"
@@ -78,14 +76,14 @@ export function Header() {
           <nav className="flex flex-col gap-3" aria-label="Mobile Navigation">
             {navLinks.map((link) =>
               "external" in link && link.external ? (
-                <a
+                <DemoLink
                   key={link.href}
                   href={link.href}
                   className="rounded-lg px-3 py-2 text-sm font-medium text-foreground hover:bg-brand-soft hover:text-brand"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
-                </a>
+                </DemoLink>
               ) : (
                 <Link
                   key={link.href}
@@ -97,13 +95,12 @@ export function Header() {
                 </Link>
               ),
             )}
-            <a
-              href={DEMO_URL}
+            <DemoLink
               className="mt-1 rounded-xl bg-brand px-4 py-2.5 text-center text-sm font-semibold text-white"
               onClick={() => setOpen(false)}
             >
               Demo starten
-            </a>
+            </DemoLink>
           </nav>
         </div>
       )}

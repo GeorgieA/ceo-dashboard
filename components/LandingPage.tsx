@@ -10,8 +10,9 @@ import {
   Wallet,
 } from "lucide-react";
 import { CtaBanner } from "@/components/CtaBanner";
+import { DemoLink } from "@/components/DemoLink";
 import { ModuleGrid } from "@/components/ModuleGrid";
-import { DEMO_URL, benefits } from "@/lib/site";
+import { benefits } from "@/lib/site";
 
 const impactPoints = [
   {
@@ -61,13 +62,10 @@ export function Hero() {
             Oberfläche – der Funnel zur Live-Demo beginnt hier.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <a
-              href={DEMO_URL}
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark"
-            >
+            <DemoLink className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-dark">
               Demo starten
               <ArrowRight className="h-4 w-4" aria-hidden />
-            </a>
+            </DemoLink>
             <a
               href="#wirkung"
               className="inline-flex items-center justify-center rounded-xl border border-border bg-surface px-6 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-brand/40 hover:bg-brand-soft/50"
@@ -234,13 +232,10 @@ export function Modules() {
         <ModuleGrid />
 
         <div className="mt-10 text-center">
-          <a
-            href={DEMO_URL}
-            className="inline-flex items-center gap-2 rounded-xl bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
-          >
+          <DemoLink className="inline-flex items-center gap-2 rounded-xl bg-brand px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-dark">
             Module in der Demo öffnen
             <ArrowRight className="h-4 w-4" aria-hidden />
-          </a>
+          </DemoLink>
         </div>
       </div>
     </section>
